@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Carrom Club
 
-## Getting Started
+A responsive, browser-playable carrom game inspired by the familiar board at a neighbourhood tea stall. Two local players take turns flicking a striker, pocketing their colour, and chasing the queen.
 
-First, run the development server:
+## Features
+
+- **Interactive canvas board** rendered at a crisp high-DPI resolution.
+- **Pointer and touch controls** for aiming, pulling back, and releasing the striker.
+- **Basic 2D physics** with striker and coin collisions, cushion rebounds, friction, and corner pockets.
+- **Pass-and-play scoring** for two players, with a foul penalty, queen bonus, and a first-to-nine finish.
+- **Responsive layout** designed for desktop, tablet, and phone screens.
+- **No accounts, network calls, or additional runtime packages.**
+
+## How to play
+
+1. Player one uses the ivory coins; player two uses the charcoal coins.
+2. Click or tap along your baseline to choose where to place the striker.
+3. Drag the striker backwards to aim and set power, then release to shoot. Pull farther for a stronger shot.
+4. Pocketing your own coin keeps your turn. Otherwise, play passes to the other player.
+5. Pocketing the queen awards three points. Pocketing the striker is a foul and deducts one point.
+6. The first player to reach nine points wins. If every coin is pocketed first, the higher score wins.
+7. Select **New game** at any time to reset the board and score.
+
+The game uses a deliberately approachable, simplified scoring model for quick local matches; it is not intended as a tournament-rules adjudicator.
+
+## Tech stack
+
+- [Next.js](https://nextjs.org/) App Router
+- [React](https://react.dev/) with TypeScript
+- [Tailwind CSS](https://tailwindcss.com/) 4, with app-specific responsive styling
+- HTML5 Canvas API for board rendering and animation
+
+The interactive game is a client component because it uses React state, pointer events, `requestAnimationFrame`, `ResizeObserver`, and the Canvas API. The route and root layout remain server-rendered.
+
+## Project structure
+
+```text
+app/
+  components/
+    carrom-game.tsx      Interactive game UI, canvas rendering, and input
+  lib/
+    carrom-physics.ts    Board setup, collision simulation, and scoring
+  globals.css            Theme tokens and responsive component styles
+  layout.tsx             Root layout and page metadata
+  page.tsx               Home route
+```
+
+## Requirements
+
+- Node.js 20.9 or later
+- npm (the repository includes `package-lock.json`)
+
+## Run locally
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Validation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Run the configured lint check and production build:
 
-## Learn More
+```bash
+npm run lint
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Production
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Build the application and start the production server:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+npm run start
+```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The game is a client-side local match and does not require a backend or persistent storage.

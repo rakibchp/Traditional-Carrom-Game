@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: dark;
-  --background: #10211c;
-  --surface: #172a24;
-  --surface-raised: #1d312a;
-  --foreground: #f3eddf;
-  --muted: #9bab9f;
-  --subtle: #71847a;
-  --accent: #d7ad71;
-  --accent-bright: #edc88e;
-  --line: rgba(232, 224, 203, 0.1);
+  color-scheme: light;
+  --background: #f2f0e8;
+  --surface: #fffdf7;
+  --surface-raised: #f8f6ef;
+  --foreground: #27382f;
+  --muted: #637368;
+  --subtle: #7c897f;
+  --accent: #a8733d;
+  --accent-bright: #895b32;
+  --line: rgba(53, 69, 57, 0.14);
   --font-sans: Arial, Helvetica, sans-serif;
 }
 
@@ -35,7 +35,7 @@ body {
   margin: 0;
   color: var(--foreground);
   background:
-    radial-gradient(ellipse at 50% -18%, rgba(59, 91, 73, 0.34), transparent 49%),
+    radial-gradient(ellipse at 50% -18%, rgba(184, 197, 165, 0.3), transparent 49%),
     var(--background);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -134,7 +134,7 @@ canvas:focus-visible {
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  color: #b6c4b8;
+  color: #5e7062;
   font-size: 10px;
   font-weight: 700;
 }
@@ -145,8 +145,8 @@ canvas:focus-visible {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #88b08b;
-  box-shadow: 0 0 0 4px rgba(136, 176, 139, 0.1);
+  background: #71936f;
+  box-shadow: 0 0 0 4px rgba(113, 147, 111, 0.12);
 }
 
 .new-game-button {
@@ -156,10 +156,10 @@ canvas:focus-visible {
   justify-content: center;
   gap: 9px;
   padding: 0 15px;
-  border: 1px solid rgba(215, 173, 113, 0.38);
+  border: 1px solid rgba(168, 115, 61, 0.38);
   border-radius: 7px;
-  color: var(--accent-bright);
-  background: rgba(215, 173, 113, 0.07);
+  color: #80552f;
+  background: rgba(168, 115, 61, 0.08);
   font-size: 12px;
   font-weight: 650;
   cursor: pointer;
@@ -168,8 +168,8 @@ canvas:focus-visible {
 
 .new-game-button:hover {
   transform: translateY(-1px);
-  border-color: rgba(215, 173, 113, 0.7);
-  background: rgba(215, 173, 113, 0.13);
+  border-color: rgba(168, 115, 61, 0.7);
+  background: rgba(168, 115, 61, 0.15);
 }
 
 .new-game-button svg {
@@ -190,7 +190,7 @@ canvas:focus-visible {
   align-items: center;
   gap: 10px;
   margin: 0 0 14px;
-  color: #9cae9e;
+  color: #5e7062;
   font-size: 9px;
   font-weight: 750;
 }
@@ -202,7 +202,7 @@ canvas:focus-visible {
 
 .intro h1 {
   margin: 0;
-  color: #f4eddd;
+  color: #27382f;
   font-size: clamp(32px, 4vw, 48px);
   font-weight: 580;
   letter-spacing: -0.055em;
@@ -237,14 +237,14 @@ canvas:focus-visible {
 }
 
 .match-meta strong {
-  color: #e8dfcc;
+  color: #405246;
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.08em;
 }
 
 .match-meta i {
-  color: #64746a;
+  color: #879187;
   font-size: 12px;
   font-style: normal;
 }
@@ -262,7 +262,7 @@ canvas:focus-visible {
 .how-to-card {
   border: 1px solid var(--line);
   border-radius: 10px;
-  background: rgba(24, 43, 36, 0.88);
+  background: rgba(255, 253, 247, 0.94);
 }
 
 .board-panel {
@@ -290,7 +290,7 @@ canvas:focus-visible {
   height: 31px;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(215, 173, 113, 0.24);
+  border: 1px solid rgba(168, 115, 61, 0.25);
   border-radius: 6px;
   color: var(--accent);
   font-family: Georgia, "Times New Roman", serif;
@@ -304,7 +304,7 @@ canvas:focus-visible {
 }
 
 .board-title strong {
-  color: #e8e4d8;
+  color: #37483d;
   font-size: 9px;
   font-weight: 750;
 }
@@ -323,7 +323,7 @@ canvas:focus-visible {
 
 .shot-count b {
   margin-left: 5px;
-  color: #e7ddc9;
+  color: #5b604f;
   font-size: 10px;
 }
 
@@ -333,8 +333,8 @@ canvas:focus-visible {
   margin-inline: auto;
   overflow: hidden;
   border-radius: 9px;
-  background: #10221d;
-  box-shadow: 0 14px 36px rgba(5, 14, 11, 0.25);
+  background: #e5ddcb;
+  box-shadow: 0 14px 36px rgba(64, 59, 42, 0.13);
 }
 
 .carrom-canvas {
@@ -353,8 +353,8 @@ canvas:focus-visible {
   place-items: center;
   border-radius: 8px;
   padding: 24px;
-  color: #f4eddd;
-  background: rgba(16, 33, 28, 0.96);
+  color: #27382f;
+  background: rgba(255, 253, 247, 0.97);
   text-align: center;
   font-size: 14px;
 }
@@ -367,9 +367,9 @@ canvas:focus-visible {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  color: #f4eddd;
-  background: rgba(16, 33, 28, 0.83);
-  backdrop-filter: blur(5px);
+  color: #27382f;
+  background: rgba(250, 248, 239, 0.91);
+  backdrop-filter: blur(7px);
 }
 
 .game-over-mark {
@@ -391,10 +391,10 @@ canvas:focus-visible {
 .game-over button {
   margin-top: 6px;
   padding: 11px 18px;
-  border: 1px solid rgba(237, 200, 142, 0.55);
+  border: 1px solid rgba(168, 115, 61, 0.55);
   border-radius: 6px;
-  color: #17251e;
-  background: var(--accent-bright);
+  color: #fffdf7;
+  background: #855a35;
   font-size: 12px;
   font-weight: 700;
   cursor: pointer;
@@ -419,13 +419,13 @@ canvas:focus-visible {
   flex: 0 0 auto;
   width: 9px;
   height: 9px;
-  border: 2px solid #d5c9b2;
+  border: 2px solid #c7b99f;
   border-radius: 50%;
 }
 
 .turn-dot.player-1 {
-  border-color: #9aa79f;
-  background: #35413b;
+  border-color: #6d8072;
+  background: #6d8072;
 }
 
 .turn-indicator > span:last-child {
@@ -436,7 +436,7 @@ canvas:focus-visible {
 
 .turn-indicator strong {
   overflow: hidden;
-  color: #e8e2d4;
+  color: #35463a;
   font-size: 11px;
   font-weight: 650;
   text-overflow: ellipsis;
@@ -456,7 +456,7 @@ canvas:focus-visible {
   display: flex;
   align-items: center;
   gap: 7px;
-  color: #a7b3a5;
+  color: #6c796f;
   font-size: 8px;
   font-weight: 750;
 }
@@ -475,15 +475,15 @@ canvas:focus-visible {
 .turn-card {
   padding: 17px 17px 15px;
   background:
-    radial-gradient(ellipse at 100% 0, rgba(107, 129, 89, 0.16), transparent 55%),
-    rgba(24, 43, 36, 0.92);
+    radial-gradient(ellipse at 100% 0, rgba(185, 199, 157, 0.24), transparent 55%),
+    rgba(255, 253, 247, 0.96);
 }
 
 .section-kicker {
   display: flex;
   align-items: center;
   gap: 9px;
-  color: #b7c1af;
+  color: #5b6d5f;
   font-size: 9px;
   font-weight: 750;
 }
@@ -491,7 +491,7 @@ canvas:focus-visible {
 .live-dot {
   width: 6px;
   height: 6px;
-  background: #b2c58a;
+  background: #81996a;
 }
 
 .turn-player {
@@ -509,7 +509,7 @@ canvas:focus-visible {
   place-items: center;
   border: 1px solid rgba(255, 243, 220, 0.7);
   border-radius: 50%;
-  color: #635037;
+  color: #59482f;
   background: radial-gradient(circle at 34% 26%, #fff8e9, #d6c3a2 83%);
   box-shadow: inset 0 0 0 4px rgba(117, 94, 59, 0.13), 0 3px 9px rgba(0, 0, 0, 0.2);
   font-family: Georgia, "Times New Roman", serif;
@@ -518,10 +518,10 @@ canvas:focus-visible {
 }
 
 .player-token.player-1 {
-  border-color: rgba(177, 191, 181, 0.65);
-  color: #dce5dc;
-  background: radial-gradient(circle at 34% 26%, #61736b, #26352e 83%);
-  box-shadow: inset 0 0 0 4px rgba(218, 228, 220, 0.08), 0 3px 9px rgba(0, 0, 0, 0.2);
+  border-color: rgba(92, 113, 96, 0.65);
+  color: #f7f5ec;
+  background: radial-gradient(circle at 34% 26%, #899c83, #586f5c 83%);
+  box-shadow: inset 0 0 0 4px rgba(247, 245, 236, 0.12), 0 3px 9px rgba(52, 62, 49, 0.16);
 }
 
 .turn-player > div {
@@ -536,7 +536,7 @@ canvas:focus-visible {
 }
 
 .turn-player > div > strong {
-  color: #f1e9d8;
+  color: #2e4034;
   font-size: 16px;
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -544,7 +544,7 @@ canvas:focus-visible {
 
 .turn-arrow {
   margin-left: auto;
-  color: #83917e;
+  color: #7a897d;
   font-size: 16px;
 }
 
@@ -552,7 +552,7 @@ canvas:focus-visible {
   margin: 15px 0 0;
   padding-top: 13px;
   border-top: 1px solid var(--line);
-  color: #a5b1a7;
+  color: #627267;
   font-size: 11px;
   line-height: 1.55;
 }
@@ -571,13 +571,13 @@ canvas:focus-visible {
 
 .section-heading h2 {
   margin: 0;
-  color: #e7e2d6;
+  color: #36473b;
   font-size: 9px;
   font-weight: 750;
 }
 
 .section-heading > span {
-  color: var(--subtle);
+  color: #78867b;
   font-size: 8px;
   font-weight: 700;
 }
@@ -593,7 +593,7 @@ canvas:focus-visible {
   display: flex;
   align-items: center;
   gap: 10px;
-  border-bottom: 1px solid rgba(232, 224, 203, 0.07);
+  border-bottom: 1px solid rgba(53, 69, 57, 0.1);
   opacity: 0.68;
   transition: opacity 180ms ease;
 }
@@ -614,7 +614,7 @@ canvas:focus-visible {
 
 .score-piece.charcoal {
   border-color: #6a7970;
-  background: #2a3731;
+  background: #65756a;
   box-shadow: inset 0 0 0 3px rgba(220, 233, 222, 0.07);
 }
 
@@ -625,7 +625,7 @@ canvas:focus-visible {
 }
 
 .score-person strong {
-  color: #e5e0d4;
+  color: #34453a;
   font-size: 11px;
   font-weight: 650;
 }
@@ -637,7 +637,7 @@ canvas:focus-visible {
 
 .score-value {
   margin-left: auto;
-  color: #f1e1c4;
+  color: #684f32;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 24px;
   font-weight: 400;
@@ -652,12 +652,12 @@ canvas:focus-visible {
 .score-progress span {
   display: block;
   min-width: 2px;
-  background: #e7c084;
+  background: #bd8c55;
   transition: width 250ms ease;
 }
 
 .score-progress span + span {
-  background: #87988d;
+  background: #819184;
 }
 
 .queen-note {
@@ -675,7 +675,7 @@ canvas:focus-visible {
 }
 
 .queen-note strong {
-  color: #d9c9ae;
+  color: #806442;
   font-weight: 650;
 }
 
@@ -704,7 +704,7 @@ canvas:focus-visible {
 
 .how-to-card li > span {
   padding-top: 1px;
-  color: #c19b68;
+  color: #986c3d;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 10px;
   font-style: italic;
@@ -712,7 +712,7 @@ canvas:focus-visible {
 
 .how-to-card li p {
   margin: 0;
-  color: #c3cabe;
+  color: #58685d;
   font-size: 10px;
   line-height: 1.5;
 }
@@ -724,8 +724,8 @@ canvas:focus-visible {
   margin-top: 13px;
   padding: 9px 9px;
   border-radius: 5px;
-  color: #b1aa98;
-  background: rgba(215, 173, 113, 0.07);
+  color: #625e51;
+  background: rgba(168, 115, 61, 0.09);
   font-size: 9px;
   line-height: 1.45;
 }
@@ -741,7 +741,7 @@ canvas:focus-visible {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  color: #6f8377;
+  color: #718075;
   font-size: 8px;
   font-weight: 700;
 }
@@ -757,7 +757,7 @@ canvas:focus-visible {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ac9167;
+  background: #a8733d;
 }
 
 @media (min-width: 1500px) {
@@ -772,19 +772,14 @@ canvas:focus-visible {
     width: min(100% - 40px, 900px);
   }
 
-  .game-layout {
-    grid-template-columns: minmax(0, 1fr) 270px;
-    gap: 16px;
-  }
-
   .board-panel {
     padding: 15px 15px 0;
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .game-shell {
-    width: min(100% - 32px, 620px);
+    width: min(100% - 32px, 900px);
   }
 
   .topbar {
@@ -992,6 +987,40 @@ canvas:focus-visible {
   .page-footer {
     min-height: 56px;
     font-size: 7px;
+  }
+}
+
+@media (max-width: 380px) {
+  .game-shell {
+    width: calc(100% - 20px);
+  }
+
+  .intro {
+    gap: 10px;
+  }
+
+  .intro .eyebrow {
+    letter-spacing: 0.08em;
+  }
+
+  .match-meta {
+    flex: 0 0 auto;
+  }
+
+  .board-panel {
+    padding-inline: 8px;
+  }
+
+  .gesture-hint {
+    display: none;
+  }
+
+  .page-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    padding-block: 12px;
   }
 }
 

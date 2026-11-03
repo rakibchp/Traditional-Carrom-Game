@@ -132,7 +132,7 @@ function drawBoard(
 ): void {
   const size = BOARD_SIZE;
   context.clearRect(0, 0, size, size);
-  context.fillStyle = "#10221d";
+  context.fillStyle = "#d5cfbd";
   context.fillRect(0, 0, size, size);
 
   context.save();
